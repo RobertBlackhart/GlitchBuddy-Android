@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+
+    <TextView 
+    	android:id="@+id/nameTextView"
+    	android:textColor="#FFFFFF"
+		android:textSize="28dip"
+		android:paddingTop="5dip"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:layout_alignParentTop="true"
+		android:paddingLeft="2dp"/>
+	
+	<LinearLayout 
+	    android:id="@+id/statsLayout"
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/nameTextView"
+		android:layout_alignParentLeft="true"
+		android:paddingTop="5dp">
+		
+		<LinearLayout 
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dp">
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:text="Mood"/>
+				
+			<ImageView 
+				android:id="@+id/moodImageView"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:padding="5dp"/>
+		
+		</LinearLayout>
+		
+		<LinearLayout 
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dp">
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:text="Energy"/>
+				
+			<ImageView 
+				android:id="@+id/energyImageView"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:padding="5dp"/>
+		
+		</LinearLayout>
+		
+		<LinearLayout 
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dp">
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:text="Level "
+				android:id="@+id/levelTextView"/>
+				
+			<ProgressBar 
+				android:id="@+id/xpProgressBar"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_width="64dp"
+				android:layout_height="32dp"
+				android:padding="5dp"/>
+		
+		</LinearLayout>
+		
+		<LinearLayout 
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dp">
+				
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:id="@+id/currantsTextView"/>
+				
+			<ImageView 
+				android:src="@drawable/currants"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:padding="5dp"/>
+		
+		</LinearLayout>
+		
+	</LinearLayout>   
+	
+	<ImageView 
+    	android:id="@+id/avatarImageView"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:maxHeight="100dp"
+    	android:adjustViewBounds="true"
+    	android:layout_toRightOf="@id/statsLayout"/>
+    		
+	<RelativeLayout 
+	    android:id="@+id/skillProgressLayout"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/statsLayout"
+		android:paddingRight="2dp"
+		android:paddingLeft="52dp">
+	
+		<TextView 
+			android:id="@+id/skillNameTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="2dp"
+			android:paddingRight="5dp"
+			android:textColor="#FFFFFF"
+			android:text="Skill: None"
+			android:layout_toRightOf="@id/skillIcon"/>
+		
+		<ImageView 
+			android:id="@+id/skillIcon"
+			android:src="@drawable/familiar"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_below="@id/skillNameTextView"
+			android:layout_alignBottom="@id/skillProgressLayout"/>
+		
+		<ProgressBar
+			android:id="@+id/skillProgressBar"
+			android:layout_width="fill_parent"  
+			android:layout_height="wrap_content"  
+			android:max="100"  
+			android:progress="0"  
+			style="?android:attr/progressBarStyleHorizontal"  
+			android:maxHeight="48dp"  
+			android:minHeight="48dp"
+			android:layout_toRightOf="@id/skillIcon"
+			android:layout_below="@id/skillNameTextView"/>
+					
+		<TextView
+			android:id="@+id/skillProgressTextView"
+			android:text="You are not currently learning a skill"
+			android:gravity="center"
+			android:textColor="#F000"
+			android:layout_width="fill_parent"
+			android:layout_height="48dp"
+			android:layout_toRightOf="@id/skillIcon"
+			android:layout_below="@id/skillNameTextView"/>
+		
+		<TextView
+		    android:id="@+id/tapText"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/skillProgressBar"
+		    android:layout_centerInParent="true"
+		    android:textColor="#FFFFFF"
+		    android:text="(tap to change)"/>
+		
+	</RelativeLayout>
+		
+	<ImageView
+		android:id="@+id/divider"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:layout_below="@id/statsLayout"/>
+	
+	<RelativeLayout 
+	    android:id="@+id/inventoryLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/divider">
+		
+	    <com.mcdermotsoft.FlowLayout
+	        android:id="@+id/slotLayout"
+	        android:orientation="horizontal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	    <com.mcdermotsoft.FlowLayout 
+	        android:id="@+id/bagLayout"
+	        android:orientation="horizontal"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/slotLayout"/>
+		
+	</RelativeLayout>
+	
+</RelativeLayout>

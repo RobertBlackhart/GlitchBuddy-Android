@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/day">
+  	
+	<RelativeLayout 
+		android:id="@+id/topLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+  	
+		<TextView
+		  	android:id="@+id/changeSkillNameTextView"
+		  	android:textColor="#FFFFFF"
+		  	android:text="Currently Learning Skill: None"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:layout_alignParentTop="true"
+		  	android:layout_alignParentLeft="true"
+		  	android:paddingTop="2dp"
+		  	android:paddingBottom="5dp"
+		  	android:paddingLeft="2dp"/>
+  	
+		<ImageView 
+			android:id="@+id/skillIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/changeSkillNameTextView"/>
+  	
+		<ProgressBar 
+			android:id="@+id/changeSkillProgressBar"
+			style="?android:attr/progressBarStyleHorizontal" 
+			android:progress="0" 
+			android:max="100" 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:maxHeight="48dp" 
+			android:minHeight="48dp" 
+			android:layout_toRightOf="@id/skillIcon"
+			android:layout_alignBottom="@id/skillIcon"
+			android:paddingRight="2dp"/>
+			
+		<TextView
+			android:id="@+id/changeSkillProgressTextView"
+			android:layout_height="48dp"
+			android:layout_width="fill_parent"
+			android:gravity="center"
+			android:textColor="#F000"
+			android:layout_toRightOf="@id/skillIcon"
+			android:layout_alignBottom="@id/skillIcon"/>
+  	
+	</RelativeLayout>
+	
+	<ImageView
+		android:id="@+id/divider"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="2dp"
+	    android:layout_below="@id/topLayout"/>
+	
+	<LinearLayout 
+	    android:id="@+id/progressLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/divider"/>
+	
+	<TextView 
+	  	android:id="@+id/skills"
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:textColor="#FFFFFF"
+	  	android:text="Available Skills"
+	  	android:textSize="20.0sp"
+	  	android:layout_below="@id/progressLayout"/>
+	
+	<ScrollView 
+		android:scrollbars="vertical" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:layout_below="@id/skills"> 
+	
+		<TableLayout 
+			android:id="@+id/changeSkillGrid"
+			android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content"/>
+	
+	</ScrollView>
+  	
+</RelativeLayout>

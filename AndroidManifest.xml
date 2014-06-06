@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.mcdermotsoft"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="3" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    	<activity android:name=".GlitchActivity"
+    	    	  android:configChanges="orientation|keyboardHidden"
+    	    	  android:launchMode="singleTask">
+    	     <intent-filter>
+	        	<action android:name="android.intent.action.MAIN" />
+	         	<category android:name="android.intent.category.LAUNCHER" />
+	    	</intent-filter>
+    	</activity>
+    	<activity android:name=".AuthorizeActivity"
+    	    	  android:configChanges="orientation|keyboardHidden">
+    	    <intent-filter>
+	    	    <action android:name="android.intent.action.VIEW" />
+	    	    <category android:name="android.intent.category.BROWSABLE" />
+	    	    <category android:name="android.intent.category.DEFAULT" />
+	    	    <data android:scheme="glitchbuddyandroid"/>
+	    	</intent-filter>
+    	</activity>
+    	<activity android:name=".ChangeSkillActivity"
+    	    	  android:configChanges="orientation|keyboardHidden"/>
+    	<activity android:name=".Preferences"></activity>
+    	<activity android:name=".AuctionScanActivity"
+    	    	  android:configChanges="orientation|keyboardHidden"/>
+    	<activity android:name=".CreateAuctionActivity"
+    	    	  android:configChanges="orientation|keyboardHidden"/>
+		<receiver android:name=".GlitchWidgetProvider" android:label="Glich Clock Widget">
+			<intent-filter>
+        		<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        		<action android:name="com.mcdermotsoft.GLITCH_WIDGET_UPDATE"/>
+  			</intent-filter>
+  			<meta-data 	android:name="android.appwidget.provider" 
+  						android:resource="@xml/glitch_info" />
+		</receiver>
+		<receiver android:name=".GlitchBuddyNotifier">
+			<intent-filter>
+    			<action android:name="com.mcdermotsoft.NEW_DAY_ALARM"/>
+    			<action android:name="com.mcdermotsoft.HOLIDAY_ALARM"/>
+    			<action android:name="com.mcdermotsoft.SKILL_ALARM"/>
+    		</intent-filter>
+    	</receiver>
+    	<receiver android:name=".AlarmSetReceiver">
+    	    <intent-filter>
+    	        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+    	        <action android:name="com.mcdermotsoft.PREFS_CHANGED"/>
+    	        <action android:name="com.mcdermotsoft.SET_SKILL_ALARM"/>
+    	    </intent-filter>
+    	</receiver>
+    </application>
+</manifest>

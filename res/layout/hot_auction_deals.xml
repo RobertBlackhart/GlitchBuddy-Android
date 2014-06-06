@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"	
+    android:layout_below="@id/divider">
+	
+    <TextView
+        android:id="@+id/hotDealsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hot Auction Deals!"
+        android:paddingBottom="5dp"/>
+	
+    <RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/hotDealsText"
+		android:id="@+id/headerLayout">
+		
+		<TextView 
+			android:id="@+id/nameHeader"
+			android:layout_width="120dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="Item Name"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="37dp"
+			android:paddingRight="25dp"/>
+		
+		<TextView
+		    android:id="@+id/unitCostHeader"
+		    android:layout_width="50dp"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+			android:text="Unit Cost"
+		    android:layout_toRightOf="@id/nameHeader"
+		    android:paddingRight="5dp"/>
+		
+		<TextView
+			android:id="@+id/percentAvgHeader"
+			android:layout_width="75dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="% of Average"
+			android:layout_toRightOf="@id/unitCostHeader"
+			android:paddingRight="5dp"/>
+			
+		<TextView 
+			android:id="@+id/totalCostHeader"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="Total Cost"
+			android:layout_toRightOf="@id/percentAvgHeader"/>
+		
+	</RelativeLayout>
+
+	<ListView 
+	    android:id="@+id/hotDealsList"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"/>
+
+</RelativeLayout>

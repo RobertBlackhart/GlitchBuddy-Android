@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	 <string-array 
+	 	name="holidayTimeOffsetEntries">
+	 	
+		 <item>None</item>
+		 <item>1 Minute</item>
+		 <item>5 Minutes</item>
+		 <item>10 Minutes</item>
+		 <item>30 Minutes</item>
+		 <item>1 Hour</item>
+		 <item>2 Hours</item>
+		 <item>6 Hours</item>
+		 <item>12 Hours</item>
+		 <item>1 Day</item>
+		 <item>2 Days</item>
+		 <item>1 Week</item>
+		 
+	</string-array>
+	
+	<string-array 
+		name="holidayTimeOffsetValues">
+		
+		 <item>None</item>
+		 <item>1 Minute</item>
+		 <item>5 Minutes</item>
+		 <item>10 Minutes</item>
+		 <item>30 Minutes</item>
+		 <item>1 Hour</item>
+		 <item>2 Hours</item>
+		 <item>6 Hours</item>
+		 <item>12 Hours</item>
+		 <item>1 Day</item>
+		 <item>2 Days</item>
+		 <item>1 Week</item>
+		 
+	</string-array>   
+	
+</resources>

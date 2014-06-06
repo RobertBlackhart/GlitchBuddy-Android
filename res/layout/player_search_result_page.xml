@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/day">
+  	
+    <RelativeLayout
+	    android:id="@+id/footerLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true">
+	    
+	    	<Button 
+			android:id="@+id/playerResultsCloseButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:text="Close"/>
+	    	
+	</RelativeLayout>
+	
+	<TextView 
+		android:id="@+id/playerResultTextView"
+		android:textColor="#FFFFFF"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingBottom="5dp"
+		android:layout_alignParentTop="true"/>
+	
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/playerResultTextView"
+		android:id="@+id/headerLayout">
+		
+		<TextView 
+			android:id="@+id/nameHeader"
+			android:textColor="#FFFFFF"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="Player Name"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="37dp"
+			android:paddingRight="5dp"/>
+		
+	</RelativeLayout>
+			
+	<ListView
+		android:id="@+id/playerResultListView"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/headerLayout"
+		android:layout_above="@id/footerLayout"
+		android:background="#000000"
+		android:cacheColorHint="#000000"/>			
+	
+</RelativeLayout>

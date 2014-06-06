@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/auctionScanFlipper"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	  	
+		<TextView 
+			android:id="@+id/itemSearchText"
+			android:textColor="#FFFFFF"
+			android:text="Search for item"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="15dp"/>
+	
+	  	<LinearLayout
+	  		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:orientation="horizontal"
+	  		android:layout_below="@id/itemSearchText"
+	  		android:id="@+id/itemSearchLayout">
+	  	
+			<EditText 
+				android:id="@+id/itemSearchEditText"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"/>
+				
+			<ImageButton 
+				android:id="@+id/itemSearchButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_btn_search"/>
+		  	
+		</LinearLayout>
+			
+		<CheckBox
+			android:id="@+id/exactMatchCheckBox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Exact Match"
+			android:layout_below="@id/itemSearchLayout"/>
+			
+		<TextView 
+		  	android:id="@+id/playerSearchText"
+		  	android:textColor="#FFFFFF"
+		  	android:text="Search for Player"
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:paddingTop="15dp"
+		  	android:layout_below="@id/exactMatchCheckBox"/>
+
+	  	<LinearLayout
+	  		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+	  		android:orientation="horizontal"
+	  		android:layout_below="@id/playerSearchText"
+	  		android:id="@+id/playerSearchLayout">
+	  	
+			<EditText 
+				android:id="@+id/playerSearchEditText"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"/>
+				
+			<ImageButton 
+				android:id="@+id/playerSearchButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_btn_search"/>
+		  	
+		</LinearLayout>
+		
+	</RelativeLayout>
+										
+	<include layout="@layout/item_search_result_page"/>
+			
+	<include layout="@layout/player_search_result_page"/>
+			
+</ViewFlipper>

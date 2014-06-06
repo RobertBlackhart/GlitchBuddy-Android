@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+  
+	<ImageView
+		android:id="@+id/resultIcon"
+		android:src="@drawable/icon"
+		android:layout_width="32dp"
+		android:layout_height="32dp"
+		android:paddingRight="5dp"/>
+	
+	<TextView 
+		android:id="@+id/resultName"
+		android:textColor="#FFFFFF"
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/resultIcon"
+		android:paddingRight="5dp"/>
+	
+	<TextView
+	    android:id="@+id/resultUnitCost"
+	    android:textColor="#FFFFFF"
+	    android:layout_width="50dp"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/resultName"
+	    android:paddingRight="5dp"/>
+	
+	<TextView
+		android:id="@+id/resultPercentAvg"
+		android:textColor="#FFFFFF"
+		android:layout_width="75dp"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/resultUnitCost"
+		android:paddingRight="5dp"/>
+		
+	<TextView 
+		android:id="@+id/resultCost"
+		android:textColor="#FFFFFF"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/resultPercentAvg"/>
+	
+</RelativeLayout>

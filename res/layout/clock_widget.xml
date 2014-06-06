@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_margin="4dp"
+	android:background="@drawable/background"
+	android:clickable="true"
+	android:id="@+id/backgroundLayout">
+		
+	<RelativeLayout
+	    android:id="@+id/textLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+	    
+	    <TextView
+	        android:id="@+id/title"
+	    	android:text="Glitch World Time"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"/>
+	    <TextView
+	    	android:id="@+id/widgetDayText"
+	    	android:layout_below="@id/title"
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"/>
+	    <TextView
+	    	android:id="@+id/widgetClockText"
+	    	android:layout_below="@id/widgetDayText"
+			android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textAppearance="?android:attr/textAppearanceLarge"/>
+	</RelativeLayout>
+				
+	<ImageView 
+		android:id="@+id/sunMoon"
+		android:src="@drawable/sun"
+		android:layout_toRightOf="@id/textLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+			
+	<TextView
+    	android:id="@+id/widgetDateText"
+    	android:layout_below="@id/textLayout"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"/>
+	
+</RelativeLayout>

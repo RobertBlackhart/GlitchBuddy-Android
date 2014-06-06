@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        
+	<PreferenceCategory
+		android:title="Notifications">
+		
+		<CheckBoxPreference
+			android:title="Enable Notifications"
+			android:defaultValue="false"
+			android:summary="Allow Glitch Buddy to notify you of events"
+			android:key="notificationCheckbox"/>
+		      
+		<PreferenceScreen 
+			android:title="Setup Notifications"
+			android:dependency="notificationCheckbox"
+			android:key="notificationSetupScreen">
+			
+			<PreferenceCategory 
+				android:title="Skill Notifications">
+			
+				<CheckBoxPreference 
+					android:title="Enable Skill Completion Notifications"
+					android:defaultValue="false"
+					android:summary="Enable notifications when a skill completes"
+					android:key="skillNotificationCheckbox"/>
+					
+				<RingtonePreference
+					android:title="Notification Sound"
+					android:dependency="skillNotificationCheckbox"
+					android:ringtoneType="notification"
+					android:key="skillNotificationSound"/>
+					
+				<CheckBoxPreference
+					android:title="Vibrate"
+					android:dependency="skillNotificationCheckbox"
+					android:defaultValue="false"
+					android:key="skillNotificationVibrateCheckBox"/>
+					
+				<Preference
+					android:title="Test Notification"
+					android:dependency="skillNotificationCheckbox"
+					android:summary="Tap here to test the notification now"
+					android:key="skillNotificationTest"/>
+					
+			</PreferenceCategory>
+			
+		
+			<PreferenceCategory 
+				android:title="New Day Notifications">
+				
+				<CheckBoxPreference
+					android:title="Enable New Day Notifications"
+					android:defaultValue="false"
+					android:summary="Enable notifications for the start of a New Day (12:00am) in Glitch"
+					android:key="newDayNotificationCheckbox"/>
+					
+				<ListPreference
+					android:title="Amount of time prior to New Day"
+					android:summary="(in real world time)"
+					android:dependency="newDayNotificationCheckbox"
+					android:key="newDayPriorTimeList"
+					android:defaultValue="15 Minutes"
+					android:entries="@array/newDayTimeOffsetEntries"
+					android:entryValues="@array/newDayTimeOffsetValues"/>
+						
+				<RingtonePreference
+					android:title="Notification Sound"
+					android:dependency="newDayNotificationCheckbox"
+					android:ringtoneType="notification"
+					android:key="newDayNotificationSound"/>
+					
+				<CheckBoxPreference
+					android:title="Vibrate"
+					android:dependency="newDayNotificationCheckbox"
+					android:defaultValue="false"
+					android:key="newDayNotificationVibrateCheckBox"/>
+					
+				<Preference
+					android:title="Test Notification"
+					android:dependency="newDayNotificationCheckbox"
+					android:summary="Tap here to test the notification now"
+					android:key="newDayNotificationTest"/>
+			
+			</PreferenceCategory>
+			
+			<PreferenceCategory
+				android:title="Holiday Notifications">
+				
+				<CheckBoxPreference
+					android:title="Enable Holiday Notifications"
+					android:defaultValue="false"
+					android:summary="Enable notifications for the start of a Holiday in Glitch"
+					android:key="holidayNotificationCheckbox"/>
+					
+				<ListPreference
+					android:title="Amount of time prior to Holiday"
+					android:summary="(in real world time)"
+					android:dependency="holidayNotificationCheckbox"
+					android:key="holidayPriorTimeList"
+					android:defaultValue="1 Day"
+					android:entries="@array/holidayTimeOffsetEntries"
+					android:entryValues="@array/holidayTimeOffsetValues"/>
+						
+				<RingtonePreference
+					android:title="Notification Sound"
+					android:dependency="holidayNotificationCheckbox"
+					android:ringtoneType="notification"
+					android:key="holidayNotificationSound"/>
+					
+				<CheckBoxPreference
+					android:title="Vibrate"
+					android:dependency="holidayNotificationCheckbox"
+					android:defaultValue="false"
+					android:key="holidayNotificationVibrateCheckBox"/>
+					
+				<Preference
+					android:title="Test Notification"
+					android:dependency="holidayNotificationCheckbox"
+					android:summary="Tap here to test the notification now"
+					android:key="holidayNotificationTest"/>
+			
+			</PreferenceCategory>
+
+		</PreferenceScreen>
+	
+	</PreferenceCategory>
+	
+</PreferenceScreen>

@@ -1,0 +1,84 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+    
+    <ImageView 
+        android:id="@+id/itemIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <TextView 
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/itemIcon"/>
+    
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemIcon"/>
+    
+    <ImageView
+		android:id="@+id/divider"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:layout_below="@id/itemDescription"/>
+    
+    <TextView
+        android:id="@+id/streetPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"/>
+    
+    <TextView
+        android:id="@+id/vendorPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/streetPrice"/>
+    
+    <TextView
+        android:id="@+id/averageAuctionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vendorPrice"/>
+    
+    <ImageView
+		android:id="@+id/divider2"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:layout_below="@id/averageAuctionPrice"/>
+    
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@id/divider2">
+    
+    	<Button
+	        android:id="@+id/cancelButton"
+	        android:text="Cancel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	    <Button
+	        android:id="@+id/makeAuctionButton"
+	        android:text="Create Auction(s)"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    
+	</LinearLayout>
+        
+</RelativeLayout>

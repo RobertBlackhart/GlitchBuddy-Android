@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/day">
+    
+	<RelativeLayout 
+	    android:id="@+id/header"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:paddingTop="2dp">
+	        
+    	<ImageView 
+	        android:id="@+id/itemIcon"
+	        android:scaleType="fitXY"
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"/>
+	    
+	    <TextView
+	        android:id="@+id/itemName"
+	        android:textColor="#FFFFFF"
+	        android:textSize="28sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/itemIcon"/>
+	    
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:id="@+id/header2"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true">
+		
+		<TextView
+		    android:id="@+id/itemAvailable"
+		    android:textColor="#FFFFFF"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"/>
+	    
+	    <TextView
+	        android:id="@+id/averageAuctionPrice"
+	        android:textColor="#FFFFFF"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/itemAvailable"
+	        android:layout_centerHorizontal="true"/>
+	    
+	</RelativeLayout>
+	
+	<ImageView
+		android:id="@+id/divider"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="2dp"
+	    android:paddingBottom="2dp"
+	    android:layout_below="@id/header2"/>
+    
+	<RelativeLayout
+	    android:id="@+id/fieldLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/divider"
+	    android:layout_centerHorizontal="true"
+	    android:paddingBottom="2dp">
+	    
+	    <TextView
+	        android:id="@+id/price"
+	        android:textColor="#FFFFFF"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:text="$/Unit"/>
+	    
+	    <EditText 
+	        android:id="@+id/priceEach"
+	        android:hint="$/Unit"
+	        android:inputType="numberDecimal"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/price"/>
+	    
+	    <TextView
+	        android:id="@+id/stack"
+	        android:textColor="#FFFFFF"
+	        android:layout_width="120dp"
+	        android:layout_height="wrap_content"
+	        android:text="# per Stack"
+	        android:layout_toRightOf="@id/price"/>
+	    
+	    <EditText 
+	        android:id="@+id/stackSize"
+	        android:hint="# per Stack"
+	        android:inputType="number"
+	        android:layout_width="120dp"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/priceEach"
+	        android:layout_below="@id/stack"/>
+	    
+	    <TextView
+	        android:id="@+id/totalStack"
+	        android:textColor="#FFFFFF"
+	        android:layout_width="110dp"
+	        android:layout_height="wrap_content"
+	        android:text="# of Stacks"
+	        android:layout_toRightOf="@id/stack"/>
+	    
+	    <EditText 
+	        android:id="@+id/totalStacks"
+	        android:hint="# of Stacks"
+	        android:inputType="number"
+	        android:layout_width="110dp"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/stackSize"
+	        android:layout_below="@id/totalStack"/>
+	    	    
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/buttonLayout"
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/fieldLayout"
+	    android:layout_centerHorizontal="true"
+	    android:paddingBottom="2dp">
+	
+		<LinearLayout 
+			    android:id="@+id/resultLayout"
+			    android:orientation="vertical"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content">
+			    
+			    <TextView 
+			        android:id="@+id/totalUnits"
+			        android:textColor="#FFFFFF"
+			        android:text="Total units being sold: "
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"/>
+			    
+			    <TextView
+			        android:id="@+id/totalPrice"
+			        android:textColor="#FFFFFF"
+			        android:text="Total worth of auction(s): "
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"/>
+			            
+			 </LinearLayout>
+	    
+	    <Button
+	        android:id="@+id/postAuction"
+	        android:text="Post Auction(s)"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@id/resultLayout"/>
+	    
+	</LinearLayout>
+    
+    <ImageView
+		android:id="@+id/divider2"
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@android:drawable/divider_horizontal_dark"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:paddingTop="2dp"
+	    android:paddingBottom="2dp"
+	    android:layout_below="@id/buttonLayout"/>
+    
+     <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/divider2"/>
+    
+    <TextView
+        android:id="@+id/searchString"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressLayout"/>
+	
+	<RelativeLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/searchString"
+		android:id="@+id/headerLayout">
+		
+		<com.mcdermotsoft.SortTextView 
+			android:id="@+id/nameHeader"
+			android:layout_width="120dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textColor="#FFFFFF"
+			android:text="Item Name"
+			android:layout_alignParentLeft="true"
+			android:paddingLeft="37dp"
+			android:paddingRight="25dp"/>
+		
+		<com.mcdermotsoft.SortTextView
+		    android:id="@+id/unitCostHeader"
+		    android:layout_width="50dp"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:clickable="true"
+		    android:textColor="#FFFFFF"
+			android:text="Unit Cost"
+		    android:layout_toRightOf="@id/nameHeader"
+		    android:paddingRight="5dp"/>
+		
+		<com.mcdermotsoft.SortTextView
+			android:id="@+id/percentAvgHeader"
+			android:layout_width="75dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textColor="#FFFFFF"
+			android:text="% of Average"
+			android:layout_toRightOf="@id/unitCostHeader"
+			android:paddingRight="5dp"/>
+			
+		<com.mcdermotsoft.SortTextView 
+			android:id="@+id/totalCostHeader"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textColor="#FFFFFF"
+			android:text="Total Cost"
+			android:layout_toRightOf="@id/percentAvgHeader"/>
+		
+	</RelativeLayout>
+    
+    <ListView
+        android:id="@+id/similarAuctions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:background="#000000"
+		android:cacheColorHint="#000000"/>
+
+</RelativeLayout>
